@@ -15,7 +15,7 @@ fi
 echo ">>> Starting standby node..."
 if ! has_pg_cluster; then
     echo ">>> Instance hasn't been set up yet."
-    do_replication
+    do_master_clone
 else
     echo ">>> Instance has been set up already."
     do_rewind
